@@ -36,10 +36,7 @@ public class UserController {
         user.setPassword(hash);
         user.setWinRecord(0);
         user.setLossRecord(0);
-        userDao.save(user);
 
-
-//        User user = new User(username, password, 0, 0);
         userDao.save(user);
         return "/game/home";
     }
