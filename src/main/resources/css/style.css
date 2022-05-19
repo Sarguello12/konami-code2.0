@@ -1,0 +1,97 @@
+/*styles shared by all elements*/
+* {
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Creepster', cursive;
+}
+
+i {
+    font-size: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    font-family: 'Creepster', cursive;
+    color: #9da338;
+    font-size: 50px;
+}
+
+.message a {
+    color: #8B0000;
+    text-decoration: none;
+}
+
+.message a:hover {
+    color: #ff0000;
+}
+
+.dropdown-menu, option{
+    background-color: #d5d988!important;
+    font-family: 'Creepster', cursive;
+}
+
+option {
+    font-size: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #9da338!important;
+    color: #8B0000!important;
+}
+
+.dropdown-item:active {
+    color: #ff0000!important;
+}
+
+/******************************************************************************/
+/*styling for all buttons*/
+button {
+    background-color: #d5d988;
+    color: #8B0000;
+    border: 3px solid #9da338;
+    box-shadow: 1px 1px 0 0, 2px 2px 0 0, 3px 3px 0 0, 4px 4px 0 0, 5px 5px 0 0;
+    font-family: 'Creepster', cursive!important;
+    text-transform: uppercase;
+}
+
+button:hover {
+    color: #ff0000;
+}
+
+/*styling for the menu buttons*/
+.menu-button {
+    font-size: 25px!important;
+}
+
+/*styling for the gameplay buttons*/
+.play-button {
+    font-size: 40px!important;
+}
+/******************************************************************************/
+/*modal styling*/
+.modal * {
+    background-color: #d5d988!important;
+}
+
+#modal-link {
+
+}
+
+/******************************************************************************/
+/*styling for main text line*/
+#tag-line {
+    font-size: 75px!important;
+    color: #9da338;
+}
+
+#fancy-word {
+    font-style: italic;
+    font-size: 90px;
+    color: #ced650;
+    -webkit-text-stroke: 3px #8B0000;
+}
