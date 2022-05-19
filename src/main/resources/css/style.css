@@ -11,9 +11,9 @@ i {
     font-size: 40px;
 }
 
-.hidden {
-    display: none;
-}
+/*.hidden {*/
+/*    display: none;*/
+/*}*/
 
 .message {
     font-family: 'Creepster', cursive;
@@ -46,6 +46,12 @@ option {
 
 .dropdown-item:active {
     color: #ff0000!important;
+}
+
+.vertical-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 /******************************************************************************/
