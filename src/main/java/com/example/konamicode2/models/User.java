@@ -8,9 +8,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 100, unique = true)
     private String username;
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String password;
     private int winRecord;
     private int lossRecord;
@@ -27,6 +27,14 @@ public class User {
         this.password = password;
         this.winRecord = winRecord;
         this.lossRecord = lossRecord;
+    }
+
+    public User(User copy) {
+        id = copy.id; // This line is SUPER important! Many things won't work if it's absent
+        username = copy.username;
+        password = copy.password;
+        winRecord = copy.winRecord;
+        lossRecord = copy.lossRecord;
     }
 
     public Long getId() {
