@@ -19,13 +19,20 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public String showLoginForm() {
+    public String showLoginForm(Model model) {
+        model.addAttribute("user", new User());
         return "user/login";
     }
 
     @PostMapping("/login")
-    public String loginUser(){
-        return "game/home";
+    public String loginUser(@ModelAttribute User user){
+//        boolean exists = userDao.exists(user.getUsername())
+
+//        if(){
+//            return "game/home";
+//        } else {
+//            return "user/login";
+//        }
     }
 
     @GetMapping("/create")
