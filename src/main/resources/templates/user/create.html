@@ -9,25 +9,16 @@
     <div class="d-flex justify-content-center">
         <div>
             <h1>Create an account</h1>
-            <form th:action="@{/create}" method="POST" th:object="${user}">
+            <form th:action="@{/user/create}" method="POST" th:object="${user}">
                 <label for="username">Username</label>
                 <input id="username" th:field="*{username}" />
 
                 <label for="password">Password</label>
                 <input id="password" type="password" th:field="*{password}" />
-
+                <input id="loss-record" type="hidden" th:field="*{lossRecord}">
+                <input id="win-record" type="hidden" th:field="*{winRecord}">
                 <input value="Sign me up!" type="submit" />
             </form>
-<!--            <form action="/user/create" method="post">-->
-<!--                <label for="username">Username:</label>-->
-<!--                <input type="text" id="username" name="username">-->
-<!--                <br>-->
-<!--                <br>-->
-<!--                <label for="password">Password:</label>-->
-<!--                <input type="password" id="password" name="password">-->
-<!--                <br>-->
-<!--                <input type="submit" value="submit">-->
-<!--            </form>-->
         </div>
     </div>
 

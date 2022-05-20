@@ -32,6 +32,7 @@ public class UserController {
 
     @PostMapping("/create")
     public String createUser(@ModelAttribute User user){
+
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         user.setWinRecord(0);
