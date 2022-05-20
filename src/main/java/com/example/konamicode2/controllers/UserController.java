@@ -18,11 +18,15 @@ public class UserController {
         this.passwordEncoder = passwordEncoder;
     }
 
-//    @GetMapping("/login")
-//    public String login(){
-//
-//        return "";
-//    }
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "user/login";
+    }
+
+    @PostMapping("/login")
+    public String loginUser(){
+        return "game/home";
+    }
 
     @GetMapping("/create")
     public String showSignupForm(Model model){
