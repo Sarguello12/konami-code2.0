@@ -47,15 +47,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/", "/ads") // anyone can see the home and the ads pages
-                .permitAll()
-                /* Pages that require authentication */
-                .and()
-                .authorizeRequests()
-                .antMatchers(
-                        "/ads/create", // only authenticated users can create ads
-                        "/ads/{id}/edit" // only authenticated users can edit ads
-                )
-                .authenticated();
+                .permitAll();
     }
 }
-
